@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Documark</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+<link rel="stylesheet" href="index.css">
+<script defer src="main.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+</head>
+<body>
+  <section class="section">
+    <div class="container">
+      <div class="columns is-mobile">
+  <div class="column is-three-fifths is-offset-one-fifth">
+    <h1 class="title">
+      Documark
+    </h1>
+    <p class="subtitle">
+      A util for in-browser watermarking using svg overlays. Topographical overlay taken from <a href="https://www.heropatterns.com/">Hero Patterns</a>. Test it out below!
+    </p>
+    <br/>
+    <div class="file has-name is-boxed is-large is-center is-flex is-horizontal-center">
+  <label class="file-label">
+    <input class="file-input" type="file" name="resume" accept="image/*" onchange="readURL(this);">
+    <span class="file-cta">
+      <span class="file-icon">
+        <i class="fas fa-upload"></i>
+      </span>
+      <span class="file-label">
+        Choose a file…
+      </span>
+    </span>
+    <span id="fileName" class="file-name">
+
+    </span>
+  </label>
+</div>
+<br/>
+<br/>
+  <div id="imageWrapper" class="columns box hide">
+    <div class="column">
+      <div class="box is-flex" style="flex-direction:column">
+        <div class="field">
+        <label class="label">Text</label>
+        <div class="control">
+          <input class="input" type="text" value="custom Text" id="customText" onchange="editOnTheFly();">
+        </div>
+      </div>
+        <div class="field">
+        <label class="label">Font Size</label>
+        <div class="control">
+          <input class="input" type="number" value=10 id="fontSize" onchange="editOnTheFly();">
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Opacity</label>
+        <div class="control">
+          <input class="input" type="number" value=0.1  id="opacity" onchange="editOnTheFly();">
+        </div>
+        <p class="help">Between 0 and 1</p>
+      </div>
+      <div class="field">
+        <label class="label">Color</label>
+        <div class="control">
+          <input class="input" type="text" value="#777" id="color" onchange="editOnTheFly();">
+        </div>
+        <p class="help">Full hex value</p>
+      </div>
+      </div>
+    </div>
+    <div class="column is-four-fifths is-flex is-horizontal-center">
+      <img id="blah" src="#" alt="your image" class="align-self-center" />
+    </div>
+  </div>
+    </div>
+  </div>
+</div>
+  </section>
+  </body>
+</html>
